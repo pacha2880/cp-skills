@@ -1,0 +1,14 @@
+{
+  "name": "cp-skills",
+  "description": "Agent skills for competitive programming",
+  "owner": {
+    "name": "Rodrigo (pacha2880)"
+  },
+  "plugins": [
+    {
+      "name": "cp-editorial",
+      "source": "./plugins/cp-editorial",
+      "description": "Write and explain competitive programming editorials, with depth adjusted to the problem's difficulty"
+    }
+  ]
+}
