@@ -5,6 +5,7 @@ Agent skills for competitive programming. They follow the open [Agent Skills](ht
 | Skill | What it does |
 |---|---|
 | [`cp-editorial`](plugins/cp-editorial/skills/cp-editorial/SKILL.md) | Writes editorials and explains solutions to Codeforces / ICPC / camp problems, with depth adjusted to the problem's difficulty. Also answers "I don't understand this step" questions about an editorial. |
+| [`cp-gym-upload`](plugins/cp-gym-upload/README.md) | Moves a contest that already happened (rbx, Juki, BOCA, ...) to Polygon and a Codeforces Gym: statements in English plus the original language, tests, solutions, materials and ghosts from the real scoreboard. |
 
 ## Install
 
@@ -13,6 +14,7 @@ Agent skills for competitive programming. They follow the open [Agent Skills](ht
 ```
 /plugin marketplace add pacha2880/cp-skills
 /plugin install cp-editorial@cp-skills
+/plugin install cp-gym-upload@cp-skills
 ```
 
 **Skills CLI (Claude Code, Cursor, Codex and others):**
@@ -21,7 +23,7 @@ Agent skills for competitive programming. They follow the open [Agent Skills](ht
 npx skills add pacha2880/cp-skills
 ```
 
-**Manually:** copy `plugins/cp-editorial/skills/cp-editorial/` into your skills folder (for Claude Code, `~/.claude/skills/cp-editorial/`). On Claude.ai, upload the folder as a skill in Settings.
+**Manually:** copy `plugins/<plugin>/skills/<skill>/` into your skills folder (for Claude Code, `~/.claude/skills/<skill>/`). On Claude.ai, upload the folder as a skill in Settings.
 
 ## `cp-editorial`
 
@@ -52,6 +54,14 @@ The audit checklist came from real reader questions on a first draft of that edi
 
 The draft never defined the initial state of the sweep, never said how it was computed, and never said whether it used the original or the rotated points. The final editorial has a full paragraph for it. Each of those questions became an item in the checklist: every symbol defined, every value with its origin, every initial state explicit, never "already included" without saying where.
 
+## `cp-gym-upload`
+
+Rebuilds a finished contest on Codeforces so anyone can train on it, with the original scoreboard replayed as ghosts. It has been used for the [ICPC Bolivia 2026 national contest](https://codeforces.com/gym/106758) (rbx + BOCA) and the [SanSi Cup 2025](https://codeforces.com/gym/106793) (Juki).
+
+The pipeline is the same for every contest: source → normalized package → Polygon → Gym → ghosts → verification. Only the first step depends on the judge, so supporting a new one means adding one file. The gym is left private for you to review, and you log in yourself.
+
+It needs an agent that can drive your logged-in browser (for example Claude in Chrome), because Codeforces has no API for gyms. See its [README](plugins/cp-gym-upload/README.md) for details and [CONTRIBUTING](plugins/cp-gym-upload/CONTRIBUTING.md) to add a judge or a series.
+
 ## Sources and credits
 
 The skill combines:
@@ -62,9 +72,14 @@ The skill combines:
 
 No text from those skills is copied here.
 
+`cp-gym-upload` complements [`uploading-to-polygon`](https://github.com/LLaammTTeerr/competitive-programming) from LLaammTTeerr/competitive-programming. That skill uploads new problems prepared from scratch through the official Polygon API; this one moves whole contests that already happened, including the gym and its ghosts.
+
 ## En español
 
-`cp-editorial` escribe editoriales y explica soluciones de programación competitiva. Responde en el idioma del pedido, así que funciona en español aunque la skill esté escrita en inglés. Se instala igual que arriba.
+- `cp-editorial` escribe editoriales y explica soluciones de programación competitiva.
+- `cp-gym-upload` sube un contest ya jugado (rbx, Juki, BOCA…) a Polygon y a un Gym de Codeforces. Traduce los enunciados al inglés y conserva el original. Arma los fantasmas desde el scoreboard real y los verifica equipo por equipo.
+
+Las dos responden en el idioma del pedido, así que funcionan en español aunque estén escritas en inglés. Se instalan igual que arriba.
 
 ## License
 

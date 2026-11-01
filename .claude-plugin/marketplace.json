@@ -9,6 +9,11 @@
       "name": "cp-editorial",
       "source": "./plugins/cp-editorial",
       "description": "Write and explain competitive programming editorials, with depth adjusted to the problem's difficulty"
+    },
+    {
+      "name": "cp-gym-upload",
+      "source": "./plugins/cp-gym-upload",
+      "description": "Move a finished contest (rbx, Juki, BOCA, ...) to Polygon and a Codeforces Gym, with translations, materials and ghosts from the real scoreboard"
     }
   ]
 }

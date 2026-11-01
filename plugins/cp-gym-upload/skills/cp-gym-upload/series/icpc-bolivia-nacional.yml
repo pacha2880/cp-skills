@@ -1,0 +1,15 @@
+# ICPC Bolivia national contest. Problems prepared in rbx (sources/rbx.md),
+# contest run on BOCA (sources/boca.md).
+# Copy the remaining gym settings from the previous gym when creating a new one.
+
+series: icpc-bolivia-nacional
+previous_gyms:
+  2026: 106758
+gym:
+  format: ICPC
+  participants: teams
+  country: "Bolivia"
+statements:
+  languages: [english, spanish]
+ghosts:
+  ce: keep                # BOCA: CE is an attempt without penalty
