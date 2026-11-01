@@ -1,0 +1,12 @@
+{
+  "name": "cp-gym-upload",
+  "description": "Move a finished contest (rbx, Juki, BOCA, ...) to Polygon and a Codeforces Gym, with translations, materials and ghosts from the real scoreboard",
+  "version": "1.0.0",
+  "author": {
+    "name": "Rodrigo (pacha2880)"
+  },
+  "homepage": "https://github.com/pacha2880/cp-skills",
+  "repository": "https://github.com/pacha2880/cp-skills",
+  "license": "MIT",
+  "keywords": ["competitive-programming", "codeforces", "gym", "polygon", "icpc", "ghosts"]
+}

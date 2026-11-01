@@ -1,0 +1,25 @@
+# SanSi Cup (UMSS, Cochabamba, Bolivia). Individual contest for university
+# students, run on Juki (sources/juki.md).
+
+series: sansi-cup
+previous_gyms:
+  2023: 105228
+  2024: 105642
+  2025: 106793
+gym:
+  englishName: "SanSi Cup {year}"
+  contestType: "School/University/City/Region Championship"
+  format: ICPC
+  participants: individual
+  season: "{year}-{year+1}"
+  country: "Bolivia"
+  city: "Cochabamba"
+  difficulty: 3
+  websiteUrl: "https://www.sansicup.umss.edu.bo/"
+  englishDescription: "{nth} edition of individual contest held in {year} in Bolivia for university students"
+statements:
+  languages: [english, spanish]
+ghosts:
+  ce: wa                  # Juki penalizes CE; 'wa' reproduced the 2025 scoreboard exactly
+polygon:
+  name_prefix: "sansi{year}"

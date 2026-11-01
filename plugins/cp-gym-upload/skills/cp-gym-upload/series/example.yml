@@ -1,0 +1,26 @@
+# Settings for a contest series, so every edition's gym looks the same.
+# Copy this file to series/<series>.yml. Values here answer SKILL.md §0;
+# anything the user says in the conversation still wins.
+# Private details (paths on your computer, personal preferences) belong in
+# your own project instructions, not here.
+
+series: my-cup
+previous_gyms:            # year: gym id, to copy settings from
+  2024: 100000
+gym:
+  englishName: "My Cup {year}"
+  contestType: "School/University/City/Region Championship"
+  format: ICPC            # ICPC or IOI
+  participants: individual  # individual or teams
+  season: "{year}-{year+1}"
+  country: "Country"
+  city: "City"
+  difficulty: 3           # 1..5, hidden
+  websiteUrl: "https://example.org/"
+  englishDescription: "{nth} edition of the My Cup, held in {year} in City, Country"
+statements:
+  languages: [english, spanish]   # English first: the gym shows only English statements
+ghosts:
+  ce: ask                 # keep | wa | drop | ask
+polygon:
+  name_prefix: "mycup{year}"
