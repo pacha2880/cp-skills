@@ -27,17 +27,19 @@ npx skills add pacha2880/cp-skills
 
 ## `cp-editorial`
 
-The skill is built around one test:
+The skill is built around one rule and one test:
 
-> A reader at the target level must be able to implement the solution from the text alone, without looking at the code.
+> A known tool gets named. A claim about this problem gets justified.
+>
+> A reader at the problem's rating must be able to implement the solution from the text alone, without looking at the code.
 
 It asks the model to:
 
-- pick the reader from the problem's rating (green/cyan, cyan/blue, blue/purple) and adjust depth;
+- set the focus and a target length from the problem's rating, using ranges measured on 55 Codeforces editorials from 2022 to 2026;
 - solve the problem itself first, and for hard problems implement it and stress-test it against a brute force before writing;
 - plan the chain of claims from statement to algorithm, each with its justification;
-- write prerequisites, hints as questions, a slow-then-fast tutorial, a worked example from the samples, and code that uses the same names as the text;
-- audit the draft against a checklist of the gaps that appear most often in editorials;
+- write hints, then the complete idea, numbered claims, non-standard implementation details and the complexity, with long proofs in spoilers;
+- audit the draft against a checklist of the gaps that appear most often in editorials, then delete what the reader does not need;
 - when explaining to someone who is stuck, find the missing link and answer exactly what was asked, instead of rephrasing the same explanation.
 
 It writes in the language of the request.
@@ -52,7 +54,7 @@ The audit checklist came from real reader questions on a first draft of that edi
 >
 > **Reader:** "You say they are included, but you never say how or where."
 
-The draft never defined the initial state of the sweep, never said how it was computed, and never said whether it used the original or the rotated points. The final editorial has a full paragraph for it. Each of those questions became an item in the checklist: every symbol defined, every value with its origin, every initial state explicit, never "already included" without saying where.
+The draft never defined the initial state of the sweep, never said how it was computed, and never said whether it used the original or the rotated points. The final editorial has a numbered step for it. Each of those questions became an item in the checklist: every symbol defined, every value with its origin, every initial state explicit, never "already included" without saying where.
 
 ## `cp-gym-upload`
 
