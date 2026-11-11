@@ -53,9 +53,8 @@ skills/cp-gym-upload/
     ghosts.md               ghosts: format, CE policy, upload, checks
     file-transfer.md        computer ↔ sandbox ↔ browser
     checklist.md            before handing over
-  scripts/
-    normalize_tests.py      normalize, number and zip tests for Polygon
-    ghosts.py               build / standings / check ghost files
+    scripts/normalize_tests.md  normalize, number and zip tests for Polygon
+    scripts/ghosts.md           build / standings / check ghost files
   series/
     example.yml             settings shared by every edition of a series
     sansi-cup.yml
@@ -71,6 +70,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
 - **a trick that stopped working** is a fix to the reference file that has it.
 
 ## Scripts
+
+The two helpers are Python, stored as code blocks in `references/scripts/*.md` because the Claude plugin directory accepts only text files. The skill writes them to `scripts/` in its working folder before using them. To run them yourself, copy each block to a `.py` file:
 
 ```bash
 python3 scripts/normalize_tests.py OUT TESTDIR [TESTDIR ...] --samples SAMPLEDIR

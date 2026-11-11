@@ -36,6 +36,10 @@ Ask about anything the user has not already answered (a series config in `series
 5. **Compilation errors in ghosts.** Did the original judge penalize CE? (BOCA does not; Juki does.) This decides `--ce` in `scripts/ghosts.py` and is the most common reason a ghost scoreboard does not match.
 6. **Gym settings.** Name, season, type, location, difficulty, website, description, logo. For a series, copy the previous edition (see `series/`).
 
+## Helper scripts
+
+Two helpers ship as Markdown, because the plugin directory only accepts text files: `references/scripts/normalize_tests.md` and `references/scripts/ghosts.md`. Before step 1, write the Python block of each one, unchanged, to `scripts/normalize_tests.py` and `scripts/ghosts.py` in the working folder. Every `scripts/*.py` command below refers to those files.
+
 ## 1. Build the normalized package
 
 Read the file for the source and follow it:
@@ -111,6 +115,7 @@ Go through `references/checklist.md` and fix or report every item. Then hand the
 
 | File | Read it when |
 |---|---|
+| `references/scripts/*.md` | before step 1: write the helper scripts to the working folder |
 | `references/sources/*.md` | building the package from that source |
 | `references/statements.md` | writing or converting statements (Polygon LaTeX, images, translations, PDFs) |
 | `references/file-transfer.md` | moving files between the user's computer, the sandbox and the browser |

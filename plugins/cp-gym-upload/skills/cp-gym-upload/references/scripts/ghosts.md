@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+# ghosts.py
+
+Write the code block below, unchanged, to `scripts/ghosts.py` in the work folder (see `SKILL.md`, "Helper scripts"), then run it with `python3 scripts/ghosts.py --help`. Standard library only.
+
+```python
 """Build and check Codeforces Gym ghost files (.dat) from a normalized CSV.
 
 Every source judge (BOCA, Juki, DOMjudge, ...) is first converted to one
@@ -222,3 +226,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```

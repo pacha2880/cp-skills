@@ -13,7 +13,7 @@ Create `skills/cp-gym-upload/references/sources/<judge>.md`. It must explain how
 - **how the judge treats compilation errors**, which decides `--ce`;
 - anything that broke and how you got around it.
 
-Then add the judge to the list in `SKILL.md` §1. If the conversion is mechanical, a script in `scripts/` is better than prose. Write it with the standard library only, and give it a `--help`.
+Then add the judge to the list in `SKILL.md` §1. If the conversion is mechanical, a script is better than prose: add it as a Python code block in `references/scripts/<name>.md` (no `.py` files; the plugin directory refuses them). Write it with the standard library only, and give it a `--help`.
 
 Do not change the steps after §1 for one judge. If a judge needs something the rest of the pipeline cannot do, open an issue first.
 

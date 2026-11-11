@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+# normalize_tests.py
+
+Write the code block below, unchanged, to `scripts/normalize_tests.py` in the work folder (see `SKILL.md`, "Helper scripts"), then run it with `python3 scripts/normalize_tests.py --help`. Standard library only.
+
+```python
 """Normalize a problem's tests and pack them for Polygon.
 
 Takes one or more folders with input/answer pairs in any common naming
@@ -158,3 +162,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
