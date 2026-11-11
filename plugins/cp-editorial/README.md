@@ -8,4 +8,10 @@ It writes in the language of the request.
 
 Usage: ask for an editorial ("write the editorial for this problem"), paste an editorial passage you don't understand, or ask for camp material on a problem. In Claude Code the skill can also be invoked as `/cp-editorial:cp-editorial`.
 
-See the [repository README](../../README.md) for installation and a full example.
+Install in Claude Code:
+
+```
+/plugin install cp-editorial --marketplace pacha2880/cp-skills
+```
+
+See the [repository README](../../README.md) for a full example.
