@@ -1,7 +1,7 @@
 {
   "name": "cp-gym-upload",
   "description": "Move a finished contest (rbx, Juki, BOCA, ...) to Polygon and a Codeforces Gym, with translations, materials and ghosts from the real scoreboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Rodrigo (pacha2880)"
   },
